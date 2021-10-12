@@ -1,0 +1,18 @@
+@use 'src/styles/vars' as v;
+
+.header {
+  background: v.$color-primary;
+  color: v.$color-light;
+  text-align: center;
+  padding: v.$gutter * 2;
+  border-radius: 1.5rem;
+  &__title {
+    font-weight: 700;
+    font-size: 3em;
+    margin-bottom: v.$gutter / 2;
+  }
+  &__base-amount {
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+}

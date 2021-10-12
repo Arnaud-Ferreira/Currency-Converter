@@ -1,0 +1,22 @@
+@use 'src/styles/vars' as v;
+
+.currencies {
+  background-color: v.$color-primary;
+  color: v.$color-light;
+  height: 450px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: auto;
+  &__title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: v.$gutter * 1.5 v.$gutter v.$gutter;
+  }
+}
+
+.currency {
+  padding: v.$gutter;
+  border-top: 1px solid v.$color-light; 
+}
