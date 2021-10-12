@@ -6,3 +6,5 @@ A currency search form is also integrated.
 Technologies i used : React, React-Dom, Scss, WebPack, Babel
 
 Preview : 
+
+
