@@ -19,4 +19,9 @@
 .currency {
   padding: v.$gutter;
   border-top: 1px solid v.$color-light; 
+  cursor: pointer;
+  transition: v.$transition-fast background-color;
+  &:hover {
+    background-color: v.$color-alt;
+  }
 }

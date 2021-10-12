@@ -1,12 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
-export default function Amount() {
+// Stateless component
+export default function Amount({ value, currency }) {
   return (
     <footer className="amount">
-      <p className="amount__value">1.09</p>
-      <p className="amount__currency">United States Dollar</p>
+      <p className="amount__value">{value}</p>
+      <p className="amount__currency">{currency}</p>
     </footer>
   );
 }
+
+Amount.propTypes = {
+  value: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+};
