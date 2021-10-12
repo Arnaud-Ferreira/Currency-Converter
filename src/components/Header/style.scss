@@ -1,11 +1,17 @@
 @use 'src/styles/vars' as v;
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .header {
   background: v.$color-primary;
   color: v.$color-light;
   text-align: center;
-  padding: v.$gutter * 2;
-  border-radius: 1.5rem;
+  padding: v.$gutter * 1.5;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
   &__title {
     font-weight: 700;
     font-size: 3em;
@@ -14,5 +20,18 @@
   &__base-amount {
     font-weight: 300;
     font-size: 1.2em;
+    margin-left: 1rem;
+  }
+  &__input {
+    width: 15%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    margin-right: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: v.$color-primary;
   }
 }

@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Australian Dollar',
-    rate: 1.665247,
+    rate: 1.5007,
   },
   {
     name: 'Bulgarian Lev',
@@ -135,4 +135,8 @@ export default [
     name: 'Roupie indonésienne',
     rate: 17111.234,
   },
+  {
+    name: 'Somalia shillings',
+    rate: 673.26294,
+  }
 ];

@@ -4,8 +4,9 @@
   background-color: v.$color-primary;
   color: v.$color-light;
   text-align: center;
-  padding: v.$gutter * 2;
-  border-radius: 1.5rem;
+  padding: v.$gutter * 1.5;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
   &__value {
     font-size: 2em;
     font-weight: 700;

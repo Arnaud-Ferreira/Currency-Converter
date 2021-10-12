@@ -4,16 +4,35 @@ import Currency from './Currency';
 
 import './style.scss';
 
-export default function Currencies({ currencies }) {
+export default function Currencies({
+  currencies,
+  changeCurrency,
+  inputValue,
+  onChangeInputValue,
+}) {
 
-  // const currencyList = currencies.map((currency) => {
-  //   return <Currency key={currency.name} {...currency} />;
-  // });
-  const currencyList = currencies.map((currency) => <Currency key={currency.name} {...currency} />);
+  const currencyList = currencies.map((currency) => (
+    <Currency
+      key={currency.name}
+      onClickCurrency={changeCurrency}
+      {...currency} 
+    />
+  ));
+
+  const handleOnChange = (event) => {
+    // Modifier la valeur de search du state
+    onChangeInputValue(event.target.value);
+  };
   
   return (
     <div className="currencies">
-      <p className="currencies__title">Currencies</p>
+      <input
+        type="text"
+        placeholder="Recherchez une devise"
+        className="currencies__input"
+        value={inputValue}
+        onChange={handleOnChange}
+      />
       <ul className="currencies__list">
         {currencyList}
       </ul>
@@ -28,4 +47,7 @@ Currencies.propTypes = {
     name: PropTypes.string.isRequired,
     rate: PropTypes.number.isRequired,
   })).isRequired,
+  changeCurrency: PropTypes.func.isRequired,
+  inputValue: PropTypes.string.isRequired,
+  onChangeInputValue: PropTypes.func.isRequired,
 };

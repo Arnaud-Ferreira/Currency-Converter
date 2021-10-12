@@ -4,15 +4,30 @@
   background-color: v.$color-primary;
   color: v.$color-light;
   height: 450px;
-  margin-top: 2rem;
+  margin-top: 0.55rem;
   margin-bottom: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: auto;
+  overflow-y: hidden;
   &__title {
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
     padding: v.$gutter * 1.5 v.$gutter v.$gutter;
+  }
+  &__input {
+    color: v.$color-primary;
+    width: 100%;
+    border: none;
+    padding: v.$gutter * 1.5 v.$gutter v.$gutter;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    &::placeholder {
+      font-weight: 500;
+      color: v.$color-primary;
+      opacity: 0.6;
+    }
   }
 }
 
